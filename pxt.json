@@ -1,0 +1,22 @@
+{
+    "name": "robi-blocks-he",
+    "version": "0.0.1",
+    "description": "בלוקים בעברית עבור רובי — מורה לתכנות (craftOm). תואם 1:1 לבלוקי הסוכן (Agent) המקוריים, בעברית.",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "agent.ts",
+        "test.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "public": true,
+    "preferredEditor": "blocksprj"
+}
