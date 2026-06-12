@@ -10,7 +10,7 @@ namespace robiPlayer {
     /**
      * כתוב הודעה בצ'אט של המשחק
      */
-    //% block="אמור %message"
+    //% block="%message אמור"
     //% message.shadow=text
     //% message.defl="שלום"
     //% weight=100
@@ -21,7 +21,7 @@ namespace robiPlayer {
     /**
      * לחש הודעה אל מטרה נבחרת
      */
-    //% block="לחש אל %target ההודעה %message"
+    //% block="%message ההודעה %target לחש אל"
     //% message.shadow=text
     //% inlineInputMode="inline"
     //% weight=90
@@ -32,7 +32,7 @@ namespace robiPlayer {
     /**
      * שגר את השחקן אל מיקום נתון
      */
-    //% block="שגר את השחקן אל %pos=minecraftCreatePosition"
+    //% block="%pos=minecraftCreatePosition שגר את השחקן אל"
     //% pos.shadow=minecraftCreatePosition
     //% weight=80
     export function teleport(pos: Position): void {
@@ -60,7 +60,7 @@ namespace robiPlayer {
     /**
      * הרץ קוד כאשר כותבים מילה מסוימת בצ'אט
      */
-    //% block="כאשר כותבים בצ'אט %command"
+    //% block="%command כאשר כותבים בצ'אט"
     //% command.shadow=text
     //% command.defl="לך"
     //% weight=50

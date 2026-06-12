@@ -11,7 +11,7 @@ namespace robiWorldBlocks {
     /**
      * הנח בלוק במיקום נתון
      */
-    //% block="הנח %block=minecraftBlock במיקום %pos=minecraftCreatePosition"
+    //% block="%pos=minecraftCreatePosition במיקום %block=minecraftBlock הנח"
     //% block.shadow=minecraftBlock
     //% pos.shadow=minecraftCreatePosition
     //% weight=100
@@ -22,7 +22,7 @@ namespace robiWorldBlocks {
     /**
      * מלא נפח בין שני מיקומים בבלוק נתון
      */
-    //% block="מלא ב %block=minecraftBlock מ %from=minecraftCreatePosition עד %to=minecraftCreatePosition"
+    //% block="%to=minecraftCreatePosition עד %from=minecraftCreatePosition מ %block=minecraftBlock מלא ב"
     //% block.shadow=minecraftBlock
     //% from.shadow=minecraftCreatePosition
     //% to.shadow=minecraftCreatePosition
@@ -35,7 +35,7 @@ namespace robiWorldBlocks {
     /**
      * החלף בלוק אחד באחר בתוך נפח נתון
      */
-    //% block="החלף ל %newblock=minecraftBlock כאשר הבלוק הוא %oldblock=minecraftBlock מ %from=minecraftCreatePosition עד %to=minecraftCreatePosition"
+    //% block="%to=minecraftCreatePosition עד %from=minecraftCreatePosition מ %oldblock=minecraftBlock כאשר הבלוק הוא %newblock=minecraftBlock החלף ל"
     //% newblock.shadow=minecraftBlock
     //% oldblock.shadow=minecraftBlock
     //% from.shadow=minecraftCreatePosition
@@ -49,7 +49,7 @@ namespace robiWorldBlocks {
     /**
      * בדוק אם קיים בלוק מסוים במיקום נתון (אמת / שקר)
      */
-    //% block="קיים %block=minecraftBlock במיקום %pos=minecraftCreatePosition"
+    //% block="%pos=minecraftCreatePosition במיקום %block=minecraftBlock קיים"
     //% block.shadow=minecraftBlock
     //% pos.shadow=minecraftCreatePosition
     //% weight=70
@@ -60,7 +60,7 @@ namespace robiWorldBlocks {
     /**
      * הרץ קוד כאשר מניחים בלוק מסוג נתון
      */
-    //% block="כאשר מניחים %block=minecraftBlock"
+    //% block="%block=minecraftBlock כאשר מניחים"
     //% block.shadow=minecraftBlock
     //% weight=60
     export function onBlockPlaced(block: number, handler: () => void): void {
@@ -70,7 +70,7 @@ namespace robiWorldBlocks {
     /**
      * הרץ קוד כאשר שוברים בלוק מסוג נתון
      */
-    //% block="כאשר שוברים %block=minecraftBlock"
+    //% block="%block=minecraftBlock כאשר שוברים"
     //% block.shadow=minecraftBlock
     //% weight=50
     export function onBlockBroken(block: number, handler: () => void): void {

@@ -74,7 +74,7 @@ namespace robiAgent {
     /**
      * הזזת הסוכן בכיוון נתון מספר צעדים
      */
-    //% block="הזז את הסוכן %direction %distance צעדים"
+    //% block="צעדים %distance %direction הזז את הסוכן"
     //% distance.defl=1 distance.min=1
     //% weight=100
     export function move(direction: RobiDir, distance: number): void {
@@ -84,7 +84,7 @@ namespace robiAgent {
     /**
      * סיבוב הסוכן שמאלה או ימינה
      */
-    //% block="סובב את הסוכן %direction"
+    //% block="%direction סובב את הסוכן"
     //% weight=99
     export function turn(direction: RobiTurn): void {
         agent.turn(turnOf(direction))
@@ -93,7 +93,7 @@ namespace robiAgent {
     /**
      * הסוכן מניח בלוק בכיוון נתון
      */
-    //% block="הסוכן מניח בלוק בכיוון %direction"
+    //% block="%direction הסוכן מניח בלוק בכיוון"
     //% weight=95
     export function place(direction: RobiDir): void {
         agent.place(six(direction))
@@ -102,7 +102,7 @@ namespace robiAgent {
     /**
      * הסוכן הורס בלוק בכיוון נתון
      */
-    //% block="הסוכן הורס בלוק בכיוון %direction"
+    //% block="%direction הסוכן הורס בלוק בכיוון"
     //% weight=94
     export function destroy(direction: RobiDir): void {
         agent.destroy(six(direction))
@@ -111,7 +111,7 @@ namespace robiAgent {
     /**
      * הסוכן חורש אדמה בכיוון נתון
      */
-    //% block="הסוכן חורש אדמה בכיוון %direction"
+    //% block="%direction הסוכן חורש אדמה בכיוון"
     //% weight=90
     export function till(direction: RobiDir): void {
         agent.till(six(direction))
@@ -120,7 +120,7 @@ namespace robiAgent {
     /**
      * הסוכן תוקף בכיוון נתון
      */
-    //% block="הסוכן תוקף בכיוון %direction"
+    //% block="%direction הסוכן תוקף בכיוון"
     //% weight=89
     export function attack(direction: RobiDir): void {
         agent.attack(six(direction))
@@ -129,7 +129,7 @@ namespace robiAgent {
     /**
      * הסוכן מבצע פעולה (interact) בכיוון נתון
      */
-    //% block="הסוכן מבצע פעולה בכיוון %direction"
+    //% block="%direction הסוכן מבצע פעולה בכיוון"
     //% weight=88
     export function interact(direction: RobiDir): void {
         agent.interact(six(direction))
@@ -138,7 +138,7 @@ namespace robiAgent {
     /**
      * הסוכן אוסף פריט מסוים מהקרקע
      */
-    //% block="הסוכן אוסף %item"
+    //% block="%item הסוכן אוסף"
     //% weight=80
     export function collect(item: Block): void {
         agent.collect(item)
@@ -156,7 +156,7 @@ namespace robiAgent {
     /**
      * הסוכן בוחר תא מלאי פעיל
      */
-    //% block="הסוכן בוחר תא מלאי %slot"
+    //% block="%slot הסוכן בוחר תא מלאי"
     //% slot.defl=1 slot.min=1 slot.max=27
     //% weight=70
     export function setSlot(slot: number): void {
@@ -166,7 +166,7 @@ namespace robiAgent {
     /**
      * הסוכן משליך פריטים מתא מסוים בכיוון נתון
      */
-    //% block="הסוכן משליך מתא %slot כמות %count בכיוון %direction"
+    //% block="%direction בכיוון %count כמות %slot הסוכן משליך מתא"
     //% slot.defl=1 count.defl=1
     //% weight=69
     export function drop(slot: number, count: number, direction: RobiDir): void {
@@ -176,7 +176,7 @@ namespace robiAgent {
     /**
      * הסוכן משליך את כל הפריטים בכיוון נתון
      */
-    //% block="הסוכן משליך הכל בכיוון %direction"
+    //% block="%direction הסוכן משליך הכל בכיוון"
     //% weight=68
     export function dropAll(direction: RobiDir): void {
         agent.dropAll(six(direction))
@@ -185,7 +185,7 @@ namespace robiAgent {
     /**
      * הסוכן מעביר פריטים בין תאי המלאי שלו
      */
-    //% block="הסוכן מעביר מתא %fromSlot לתא %toSlot כמות %count"
+    //% block="%count כמות %toSlot לתא %fromSlot הסוכן מעביר מתא"
     //% fromSlot.defl=1 toSlot.defl=2 count.defl=1
     //% weight=67
     export function transfer(fromSlot: number, toSlot: number, count: number): void {
@@ -195,7 +195,7 @@ namespace robiAgent {
     /**
      * האם הסוכן מזהה משהו בכיוון נתון (אמת / שקר)
      */
-    //% block="הסוכן מזהה %detection בכיוון %direction"
+    //% block="%direction בכיוון %detection הסוכן מזהה"
     //% weight=60
     export function detect(detection: RobiDetect, direction: RobiDir): boolean {
         return agent.detect(detectOf(detection), six(direction))
@@ -204,7 +204,7 @@ namespace robiAgent {
     /**
      * הסוכן בודק מה נמצא בכיוון נתון
      */
-    //% block="הסוכן בודק %inspection בכיוון %direction"
+    //% block="%direction בכיוון %inspection הסוכן בודק"
     //% weight=59
     export function inspect(inspection: RobiInspect, direction: RobiDir): number {
         return agent.inspect(inspectOf(inspection), six(direction))
@@ -213,7 +213,7 @@ namespace robiAgent {
     /**
      * כמות הפריטים בתא מלאי של הסוכן
      */
-    //% block="כמות הפריטים בתא %slot של הסוכן"
+    //% block="של הסוכן %slot כמות הפריטים בתא"
     //% slot.defl=1
     //% weight=50
     export function itemCount(slot: number): number {
@@ -223,7 +223,7 @@ namespace robiAgent {
     /**
      * כמות המקום הפנוי בתא מלאי של הסוכן
      */
-    //% block="מקום פנוי בתא %slot של הסוכן"
+    //% block="של הסוכן %slot מקום פנוי בתא"
     //% slot.defl=1
     //% weight=49
     export function itemSpace(slot: number): number {

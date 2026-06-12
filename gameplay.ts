@@ -11,7 +11,7 @@ namespace robiGameplay {
     /**
      * קבע את שעת היום (0=בוקר, 6000=צהריים, 13000=לילה)
      */
-    //% block="קבע את הזמן ל %time"
+    //% block="%time קבע את הזמן ל"
     //% time.defl=1000 time.min=0 time.max=24000
     //% weight=100
     export function timeSet(time: number): void {
@@ -21,7 +21,7 @@ namespace robiGameplay {
     /**
      * קבע את מזג האוויר
      */
-    //% block="קבע מזג אוויר %weather"
+    //% block="%weather קבע מזג אוויר"
     //% weight=90
     export function setWeather(weather: RobiWeather): void {
         gameplay.setWeather(robiCommon.weatherOf(weather))
@@ -30,7 +30,7 @@ namespace robiGameplay {
     /**
      * קבע מצב משחק למטרה נבחרת
      */
-    //% block="קבע מצב משחק %mode עבור %target"
+    //% block="%target עבור %mode קבע מצב משחק"
     //% inlineInputMode="inline"
     //% weight=80
     export function setGameMode(mode: RobiGameMode, target: RobiTarget): void {
@@ -40,7 +40,7 @@ namespace robiGameplay {
     /**
      * קבע רמת קושי
      */
-    //% block="קבע רמת קושי %difficulty"
+    //% block="%difficulty קבע רמת קושי"
     //% weight=70
     export function setDifficulty(difficulty: RobiDifficulty): void {
         gameplay.setDifficulty(robiCommon.difficultyOf(difficulty))
@@ -49,7 +49,7 @@ namespace robiGameplay {
     /**
      * הצג כותרת גדולה על המסך של מטרה נבחרת
      */
-    //% block="הצג ל %target כותרת %title וכותרת משנה %subTitle"
+    //% block="%subTitle וכותרת משנה %title כותרת %target הצג ל"
     //% title.shadow=text subTitle.shadow=text
     //% inlineInputMode="inline"
     //% weight=60
@@ -60,7 +60,7 @@ namespace robiGameplay {
     /**
      * הענק נקודות ניסיון (XP) למטרה נבחרת
      */
-    //% block="הענק %amount נקודות ניסיון ל %target"
+    //% block="%target נקודות ניסיון ל %amount הענק"
     //% amount.defl=1
     //% inlineInputMode="inline"
     //% weight=50

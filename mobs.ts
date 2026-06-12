@@ -11,7 +11,7 @@ namespace robiMobs {
     /**
      * צור יצור במיקום נתון
      */
-    //% block="צור %mob במיקום %pos=minecraftCreatePosition"
+    //% block="%pos=minecraftCreatePosition במיקום %mob צור"
     //% pos.shadow=minecraftCreatePosition
     //% weight=100
     export function spawn(mob: RobiMob, pos: Position): void {
@@ -21,7 +21,7 @@ namespace robiMobs {
     /**
      * חסל מטרה נבחרת
      */
-    //% block="חסל את %target"
+    //% block="%target חסל את"
     //% weight=90
     export function kill(target: RobiTarget): void {
         mobs.kill(robiCommon.targetOf(target))
@@ -30,7 +30,7 @@ namespace robiMobs {
     /**
      * תן פריט למטרה נבחרת
      */
-    //% block="תן ל %target את %item=minecraftItem בכמות %amount"
+    //% block="%amount בכמות %item=minecraftItem את %target תן ל"
     //% item.shadow=minecraftItem
     //% amount.defl=1 amount.min=1
     //% inlineInputMode="inline"
@@ -42,7 +42,7 @@ namespace robiMobs {
     /**
      * הפעל אפקט על מטרה נבחרת
      */
-    //% block="הפעל אפקט %effect על %target למשך %duration שניות בעוצמה %amplifier"
+    //% block="%amplifier שניות בעוצמה %duration למשך %target על %effect הפעל אפקט"
     //% duration.min=0 duration.max=600 duration.defl=10
     //% amplifier.min=0 amplifier.max=255 amplifier.defl=1
     //% inlineInputMode="inline"
@@ -54,7 +54,7 @@ namespace robiMobs {
     /**
      * שגר מטרה נבחרת אל מיקום נתון
      */
-    //% block="שגר את %target אל %pos=minecraftCreatePosition"
+    //% block="%pos=minecraftCreatePosition אל %target שגר את"
     //% pos.shadow=minecraftCreatePosition
     //% weight=60
     export function teleportToPosition(target: RobiTarget, pos: Position): void {
